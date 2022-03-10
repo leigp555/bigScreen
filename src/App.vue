@@ -1,5 +1,7 @@
 <template>
- <div id="demo" :style=demoStyle></div>
+ <div id="demo" :style=demoStyle>
+   <div class="x"></div>
+ </div>
 </template>
 
 
@@ -18,16 +20,23 @@ style.innerHTML=string
 document.head.appendChild(style)
 //上下左右居中对其
 const marginTop=(deviceHeight-pagHeight)/2
-const marginRight=(deviceWidth-pagWidth)/2
 const demoStyle=computed(()=>{
-  return {"width":pagWidth+'px',"height":pagHeight+'px',"marginTop":marginTop+'px',"marginLeft":marginRight+'px'}
+  return {"width":pagWidth+'px',"height":pagHeight+'px',"marginTop":marginTop+'px'}
 })
 </script>
 
 
-<style>
+<style lang="scss" scoped>
+@import "helper";
 #demo{
-  background-color: red;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: green;
+  .x{
+    width: px(468);
+    height: px(342);
+    background-color: yellow;
+  }
 }
 
 </style>

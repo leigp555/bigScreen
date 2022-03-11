@@ -18,6 +18,7 @@
   border: px(1) solid #016add;
   box-shadow: inset 0 0 px(20) px(20) rgba(15, 28, 124,.5);
   position:relative;
+  padding-top: px(24);
   &:before{
     display: block;
     content: "";

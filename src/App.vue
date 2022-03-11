@@ -63,7 +63,7 @@ import Chart10 from "./components/Chart10.vue";
 //通过浏览器宽高以及设计稿比例计算出页面的宽度高度
 const deviceWidth=document.documentElement.clientWidth
 const deviceHeight=document.documentElement.clientHeight
-let pagWidth:number=deviceWidth/deviceHeight>1920/1080?deviceHeight*(1920/1080):deviceWidth
+window.pagWidth=deviceWidth/deviceHeight>1920/1080?deviceHeight*(1920/1080):deviceWidth
 const pagHeight=pagWidth/(1920/1080)
 const style=document.createElement("style")
 const string=`html{

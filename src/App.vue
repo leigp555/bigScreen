@@ -8,19 +8,21 @@
      <div class="title"><span>2021圆通全国集运平台数据监控</span></div>
    </header>
    <main>
-     <section class="chartA">货主订单月报</section>
-     <section class="chartAA"></section>
-     <section class="chartB">承运商车辆认证</section>
+     <section class="chartA">货主订单月报 /</section>
+     <section class="chartAA">
+       <Chart1></Chart1>
+     </section>
+     <section class="chartB">承运商车辆认证 /</section>
      <section class="chartBB"></section>
      <section class="chartCC"></section>
      <section class="chartDD"></section>
      <section class="chartEE"></section>
      <section class="chartFF"></section>
-     <section class="chartG">承运商派单情况</section>
+     <section class="chartG">承运商派单情况 /</section>
      <section class="chartGA"></section>
      <section class="chartGB"></section>
      <section class="chartGC"></section>
-     <section class="chartH">用户注册情况分析</section>
+     <section class="chartH">用户注册情况分析 /</section>
      <section class="chartHA"></section>
      <section class="chartHB"></section>
    </main>
@@ -30,6 +32,7 @@
 
 <script setup lang="ts">
 import {computed} from "vue";
+import Chart1 from "./components/Chart1.vue"
 //通过浏览器宽高以及设计稿比例计算出页面的宽度高度
 const deviceWidth=document.documentElement.clientWidth
 const deviceHeight=document.documentElement.clientHeight
@@ -76,8 +79,8 @@ const demoStyle=computed(()=>{
       background-color: #0c2e99;
     }
     >.title{
-      height: px(78);
-      width: px(976);
+      height: px(75);
+      width: px(1080);
       background-color:  #0c2e99;
       position: absolute;
       top: 0;
@@ -88,35 +91,8 @@ const demoStyle=computed(()=>{
       justify-content: center;
       align-items: center;
       border-bottom:1px solid #4e6dc0;
-      :before{
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateX(-98%);
-        background-color:  #0c2e99;
-        border-left: 1px solid  #4e6dc0;
-        border-bottom:1px solid  #4e6dc0 ;
-        height: px(75);
-        width: px(78);
-        border-bottom-left-radius: px(77);
-      }
-      :after{
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(98%);
-        background-color:  #0c2e99;
-        border-right: 1px solid  #4e6dc0;
-        border-bottom:1px solid  #4e6dc0 ;
-        height: px(75);
-        width: px(78);
-        border-bottom-right-radius: px(78);
-
-      }
+      border-bottom-right-radius: px(80);
+      border-bottom-left-radius: px(80);
       >span{
         font-size: px(32);
       }
@@ -124,9 +100,9 @@ const demoStyle=computed(()=>{
   }
   >main{
     flex-grow: 1;
+    margin-top: px(10);
     padding: px(30);
     >section {
-      border: 1px solid red;
 
     }
     display: grid;
@@ -144,6 +120,7 @@ const demoStyle=computed(()=>{
     >.chartA{
       grid-area: a;
       margin-bottom: px(-5);
+      background-color: inherit;
     }
     >.chartAA{
       grid-area: aa;
@@ -151,12 +128,14 @@ const demoStyle=computed(()=>{
     >.chartB{
       grid-area: b;
       margin-bottom: px(-5);
+      background-color: inherit;
     }
     >.chartBB{
       grid-area: ba;
     }
     >.chartCC{
       grid-area: c;
+      background-color: inherit;
     }
     >.chartDD{
       grid-area: d;
@@ -170,6 +149,7 @@ const demoStyle=computed(()=>{
     >.chartG{
       grid-area: g;
       margin-bottom: px(-5);
+      background-color: inherit;
     }
     >.chartGA{
       grid-area: ga;
@@ -177,12 +157,13 @@ const demoStyle=computed(()=>{
     >.chartGB{
       grid-area:gb;
     }
-    >.chartGc{
+    >.chartGC{
       grid-area: gc;
     }
     >.chartH{
       grid-area: h;
       margin-bottom: px(-5);
+      background-color: inherit;
     }
     >.chartHA{
       grid-area: ha;

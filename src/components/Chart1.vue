@@ -1,21 +1,8 @@
 <template>
- <Border>
-   <div class="wrap">
-     <div class="title">
-       <svg class="icon" >
-         <use xlink:href="#icon-tip"></use>
-       </svg>
-       <span>本月货主下单情况</span>
-     </div>
-     <div class="echart">
-       <Echart :option="option"/>
-     </div>
-   </div>
- </Border>
+  <Echart :option="option" title="本月货主下单情况" root="echartA"/>
 </template>
 
 <script lang="ts" setup>
-import Border from './Border.vue'
 import Echart from "./Echart.vue";
 import * as echarts from 'echarts/core';
 import {ECOption} from "../type.d.ts/type";
@@ -41,7 +28,7 @@ const option:ECOption={
     },
     name:"(周)",
     nameTextStyle: {
-      fontSize: 12
+      fontSize: px(15)
     },
     nameGap: px(10),
   },
@@ -51,7 +38,7 @@ const option:ECOption={
     nameGap: px(10),
     nameLocation:"end",
     nameTextStyle: {
-      fontSize: 12
+      fontSize: px(15)
     },
     splitLine: {
       show: false
@@ -96,26 +83,5 @@ const option:ECOption={
 </script>
 
 <style lang="scss" scoped>
-@import "src/helper";
-.wrap{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding-left: px(20);
- >.title{
-   display: flex;
-   align-items: center;
-   >.icon{
-     width: 1em; height: 1em;
-     vertical-align: -0.15em;
-     fill: currentColor;
-     overflow: hidden;
-   }
- }
-  >.echart{
-    flex-grow: 10;
-
-  }
-}
 
 </style>

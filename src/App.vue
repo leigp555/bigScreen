@@ -13,18 +13,36 @@
        <Chart1></Chart1>
      </section>
      <section class="chartB">承运商车辆认证 /</section>
-     <section class="chartBB"></section>
+     <section class="chartBB">
+       <Chart2></Chart2>
+     </section>
      <section class="chartCC"></section>
-     <section class="chartDD"></section>
-     <section class="chartEE"></section>
-     <section class="chartFF"></section>
+     <section class="chartDD">
+       <Chart3></Chart3>
+     </section>
+     <section class="chartEE">
+       <Chart4></Chart4>
+     </section>
+     <section class="chartFF">
+       <Chart5></Chart5>
+     </section>
      <section class="chartG">承运商派单情况 /</section>
-     <section class="chartGA"></section>
-     <section class="chartGB"></section>
-     <section class="chartGC"></section>
+     <section class="chartGA">
+       <Chart6></Chart6>
+     </section>
+     <section class="chartGB">
+       <Chart7></Chart7>
+     </section>
+     <section class="chartGC">
+       <Chart8></Chart8>
+     </section>
      <section class="chartH">用户注册情况分析 /</section>
-     <section class="chartHA"></section>
-     <section class="chartHB"></section>
+     <section class="chartHA">
+       <Chart9></Chart9>
+     </section>
+     <section class="chartHB">
+       <Chart10></Chart10>
+     </section>
    </main>
  </div>
 </template>
@@ -33,6 +51,15 @@
 <script setup lang="ts">
 import {computed} from "vue";
 import Chart1 from "./components/Chart1.vue"
+import Chart2 from "./components/Chart2.vue";
+import Chart3 from "./components/Chart3.vue";
+import Chart4 from "./components/Chart4.vue";
+import Chart5 from "./components/Chart5.vue";
+import Chart6 from "./components/Chart6.vue";
+import Chart7 from "./components/Chart7.vue";
+import Chart8 from "./components/Chart8.vue";
+import Chart9 from "./components/Chart9.vue";
+import Chart10 from "./components/Chart10.vue";
 //通过浏览器宽高以及设计稿比例计算出页面的宽度高度
 const deviceWidth=document.documentElement.clientWidth
 const deviceHeight=document.documentElement.clientHeight

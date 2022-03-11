@@ -15,8 +15,8 @@
 .borderWrap {
   width: 100%;
   height: 100%;
-  border: 3px solid #016add;
-
+  border: px(1) solid #016add;
+  box-shadow: inset 0 0 px(20) px(20) rgba(15, 28, 124,.5);
   position:relative;
   &:before{
     display: block;
@@ -26,7 +26,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 13px 0 0 -10px #102b86,-13px 0 0 -10px #102b86,0 13px 0 -10px #102b86,0 -13px 0 -10px #102b86;
+    box-shadow:
+        px(32) 0 0 px(-30) #102b86,
+        px(-32) 0 0 px(-30) #102b86,
+        0 px(32) 0 px(-30) #102b86,
+        0 px(-32) 0 px(-30) #102b86,
 
   }
 }

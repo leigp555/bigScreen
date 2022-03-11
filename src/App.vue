@@ -5,14 +5,14 @@
        <span>数据时段</span>
        <span>2021年5月28日 周一 18:30</span>
      </div>
-     <div class="title"><span>2021圆通全国集运平台数据监控</span></div>
+     <div class="title"><h2>2021圆通全国集运平台数据监控</h2></div>
    </header>
    <main>
-     <section class="chartA">货主订单月报 /</section>
+     <h2 class="chartA">货主订单月报 /</h2>
      <section class="chartAA">
        <Chart1></Chart1>
      </section>
-     <section class="chartB">承运商车辆认证 /</section>
+     <h2 class="chartB">承运商车辆认证 /</h2>
      <section class="chartBB">
        <Chart2></Chart2>
      </section>
@@ -26,7 +26,7 @@
      <section class="chartFF">
        <Chart5></Chart5>
      </section>
-     <section class="chartG">承运商派单情况 /</section>
+     <h2 class="chartG">承运商派单情况 /</h2>
      <section class="chartGA">
        <Chart6></Chart6>
      </section>
@@ -36,7 +36,7 @@
      <section class="chartGC">
        <Chart8></Chart8>
      </section>
-     <section class="chartH">用户注册情况分析 /</section>
+     <h2 class="chartH">用户注册情况分析 /</h2>
      <section class="chartHA">
        <Chart9></Chart9>
      </section>
@@ -120,8 +120,11 @@ const demoStyle=computed(()=>{
       border-bottom:1px solid #4e6dc0;
       border-bottom-right-radius: px(80);
       border-bottom-left-radius: px(80);
-      >span{
+      >h2{
         font-size: px(32);
+        text-align: center;
+        vertical-align: center;
+        letter-spacing: px(5);
       }
     }
   }
@@ -144,6 +147,9 @@ const demoStyle=computed(()=>{
     "ba d e ha ha"
     "ba d f hb hb"
   ;
+    >h2{
+      font-size: px(20);
+    }
     >.chartA{
       grid-area: a;
       margin-bottom: px(-5);

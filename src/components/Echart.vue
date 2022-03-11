@@ -67,7 +67,7 @@ const dom=ref<HTMLElement|null>()
 onMounted(()=>{
   dom.value=document.getElementById(root.value!)
   const myChart = echarts.init(dom.value!);
-  myChart.setOption(option.value);
+  option.value&&myChart.setOption(option.value);
 })
 </script>
 

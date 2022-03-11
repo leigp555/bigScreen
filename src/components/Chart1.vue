@@ -20,7 +20,8 @@ const option:ECOption={
     data: ['第一周', '第二周', '第三周', '第四周'],
     axisLabel:{
       show: true,
-      fontSize:px(15)
+      fontSize:px(15),
+      color:"#a19fc4"
     },
     axisTick: {
       alignWithLabel: false,
@@ -38,7 +39,8 @@ const option:ECOption={
     nameGap: px(10),
     nameLocation:"end",
     nameTextStyle: {
-      fontSize: px(15)
+      fontSize: px(15),
+      color:"#a19fc4"
     },
     splitLine: {
       show: false
@@ -47,7 +49,8 @@ const option:ECOption={
       show: true
     },
     axisLabel:{
-      fontSize:px(12)
+      fontSize:px(12),
+      color:"#a19fc4"
     }
   },
   series: [

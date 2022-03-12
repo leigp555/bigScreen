@@ -11,63 +11,13 @@ const px = (value: number) => {
   return (value / 1920 * (window.pagWidth))
 }
 
-
-// const option:ECOption={
-
-//   xAxis: {
-//     data: ['第一周', '第二周', '第三周', '第四周'],
-//
-//
-//
-//   yAxis: {
-//
-
-//     axisLine: {
-//       show: true
-//     },
-//     axisLabel:{
-//       fontSize:px(12)
-//     }
-//   },
-//   series: [
-//     {
-//       name: '笔',
-//       type: 'bar',
-//       barWidth: px(20),
-//       itemStyle: {
-//         color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
-//           offset: 0,
-//           color: "#1268f3"
-//         }, {
-//           offset: 0.6,
-//           color: "#08a4fa"
-//         }, {
-//           offset: 1,
-//           color: "#01ccfe"
-//         }], false),
-//         barBorderRadius:[px(20), px(20), 0, 0]
-//       },
-//       data: [11036, 16521, 14780, 23467],
-//       label: {
-//         show: true,
-//         fontSize:px(12),
-//         color: "white",
-//         verticalAlign: "top",
-//         position:"top",
-//         distance:px(15)
-//       }
-//     },
-//   ]
-// }
-
-
 const option: ECOption = {
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-      type: 'shadow'
-    }
-  },
+  // tooltip: {
+  //   trigger: 'axis',
+  //   axisPointer: {
+  //     type: 'shadow'
+  //   }
+  // },
   grid: {
     x: px(80),
     y: px(20),

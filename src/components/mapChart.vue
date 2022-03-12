@@ -1,23 +1,20 @@
 <template>
-  <Border>
     <div class="wrap">
       <div class="title">
         <svg class="icon" >
           <use xlink:href="#icon-tip"></use>
         </svg>
-        <span>{{title}}</span>
+        <span>各省订单量概览</span>
       </div>
       <div class="echart">
         <div :id="root" class="echartMain"></div>
       </div>
+      <span>注:此图仅显示中国部分地区</span>
     </div>
-  </Border>
-
 </template>
 
 <script lang="ts" setup>
 import * as echarts from 'echarts/core';
-import Border from './Border.vue'
 import {
   BarChart,PieChart,LineChart, MapChart, LinesChart} from 'echarts/charts';
 import {
@@ -83,8 +80,14 @@ onMounted(()=>{
   flex-direction: column;
   height: 100%;
   padding-left: px(20);
+  position: relative;
+  top: 0;
+  left: 0;
   >.title{
     display: flex;
+    position: absolute;
+    top: px(60);
+    left: px(70);
     align-items: center;
     gap: px(10);
     >.icon{
@@ -100,6 +103,13 @@ onMounted(()=>{
   >.echart{
     flex-grow: 10;
 
+  }
+  >span{
+    font-size: px(12);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

@@ -16,7 +16,9 @@
      <section class="chartBB">
        <Chart2></Chart2>
      </section>
-     <section class="chartCC"></section>
+     <section class="chartCC">
+       <ChartMap/>
+     </section>
      <section class="chartDD">
        <Chart3></Chart3>
      </section>
@@ -60,6 +62,7 @@ import Chart7 from "./components/Chart7.vue";
 import Chart8 from "./components/Chart8.vue";
 import Chart9 from "./components/Chart9.vue";
 import Chart10 from "./components/Chart10.vue";
+import ChartMap from "./components/ChartMap.vue";
 //通过浏览器宽高以及设计稿比例计算出页面的宽度高度
 const deviceWidth=document.documentElement.clientWidth
 const deviceHeight=document.documentElement.clientHeight

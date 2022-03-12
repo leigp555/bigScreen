@@ -25,6 +25,13 @@ const option: ECOption = {
     show: true,
     min: 0,
     max: 10000,
+    pieces: [
+      {min: 9000},
+      {min: 6000, max: 8999},
+      {min: 3000, max: 5999},
+      {min: 1, max: 2999},
+      {max: 0}
+    ],
     align: "left",
     left: px(60),
     bottom:px(30),
@@ -39,7 +46,7 @@ const option: ECOption = {
     },
     itemGap:px(5),
     inRange: {
-      color: ['#fccf7c', '#f99b7f', '#fd6e80'],
+      color: ['#e0cba1','#fccf7c', '#f99b7f', '#f84c62'],
     },
   },
   tooltip: {
@@ -56,7 +63,7 @@ const option: ECOption = {
         fontSize: px(15),
         fontFamily:'-apple-system, "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif',
         fontWeight:"normal",
-        color: "white"
+        color: "#f7f7f7"
       },
       top: px(20),
       left:px(210),
@@ -80,12 +87,12 @@ const option: ECOption = {
         {name: '贵州', value: 5500},
         {name: '山东', value: 4000},
         {name: '江西', value: 5000},
-        {name: '河南', value: 9000},
+        {name: '河南', value: 8000},
         {name: '辽宁', value: 6000},
         {name: '山西', value: 4000},
         {name: '安徽', value: 7000},
         {name: '福建', value: 8000},
-        {name: '浙江', value: 9000},
+        {name: '浙江', value: 8000},
         {name: '江苏', value: 8000},
         {name: '重庆', value: 6000},
         {name: '宁夏', value: 2500},
@@ -93,7 +100,7 @@ const option: ECOption = {
         {name: '台湾', value: 2000},
         {name: '北京', value: 7000},
         {name: '天津', value: 5000},
-        {name: '上海', value: 10000},
+        {name: '上海', value: 8000},
         {name: '香港', value: 8000},
         {name: '澳门', value: 5000}
       ],

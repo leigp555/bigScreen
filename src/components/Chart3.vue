@@ -1,5 +1,5 @@
 <template>
-  <Echart :option="option" title="承运商车辆适配情况" root="echartC"/>
+  <Echart :option="option" title="承运商车辆适配情况" root="echartC" :intro="intro"/>
 </template>
 
 <script lang="ts" setup>
@@ -9,103 +9,100 @@ import {ECOption} from "../type.d.ts/type";
 const px=(value:number)=>{
   return (value/1920*(window.pagWidth))
 }
-// const option:ECOption={
-//   grid:{
-//     x:px(60),
-//     y:px(50),
-//     x2:px(50),
-//     y2:px(50)
-//   },
-//   xAxis: {
-//     data: ['第一周', '第二周', '第三周', '第四周'],
-//     axisLabel:{
-//       show: true,
-//       fontSize:px(15),
-//       color:"#a19fc4"
-//     },
-//     axisTick: {
-//       alignWithLabel: false,
-//       show: false
-//     },
-//     name:"(周)",
-//     nameTextStyle: {
-//       fontSize: px(15)
-//     },
-//     nameGap: px(10),
-//   },
-//
-//   yAxis: {
-//     name:"(笔)",
-//     nameGap: px(10),
-//     nameLocation:"end",
-//     nameTextStyle: {
-//       fontSize: px(15),
-//       color:"#a19fc4"
-//     },
-//     splitLine: {
-//       show: false
-//     },
-//     axisLine: {
-//       show: true
-//     },
-//     axisLabel:{
-//       fontSize:px(12),
-//       color:"#a19fc4"
-//     }
-//   },
-//   series: [
-//     {
-//       name: '笔',
-//       type: 'bar',
-//       barWidth: px(20),
-//       itemStyle: {
-//         color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
-//           offset: 0,
-//           color: "#1268f3"
-//         }, {
-//           offset: 0.6,
-//           color: "#08a4fa"
-//         }, {
-//           offset: 1,
-//           color: "#01ccfe"
-//         }], false),
-//         barBorderRadius:[px(20), px(20), 0, 0]
-//       },
-//       data: [11036, 16521, 14780, 23467],
-//       label: {
-//         show: true,
-//         fontSize:px(12),
-//         color: "white",
-//         verticalAlign: "top",
-//         position:"top",
-//         distance:px(15)
-//       }
-//     },
-//   ]
-// }
+
 const option:ECOption = {
-    grid:{
-    x:px(0),
-    y:px(0),
-    x2:px(0),
-    y2:px(0)
-  },
   series: [
     {
-      name: '车辆适配情况',
-      type: 'pie',
-      radius : '100%',//设置饼图大小
-      center: ['45%', '40%'],
-      radius: ['60%', '70%'],
-      avoidLabelOverlap: false,
-      labelLine: {
+      type: 'gauge',
+      center: ['48%', '35%'],
+      radius : '55%',
+      startAngle: 90,
+      endAngle: -270,
+      min: 0,
+      max: 100,
+      splitNumber: 20,
+      itemStyle: {
+        color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+          offset: 0,
+          color: "#ed737e"
+        }, {
+          offset: 0.5,
+          color: "#ff9585"
+        },{
+          offset: 0.8,
+          color: "#f7ce7e"
+        },{
+          offset: 0.9,
+          color: "#f7ce7e"
+        }
+        , {
+          offset: 1,
+          color: "#f7ce7e"
+        }], false),
+      },
+      progress: {
+        show: true,
+        width: px(5)
+      },
+      pointer: {
         show: false
       },
-      data: [{ value: 98 }, { value: 2 },],
-
-    }
+      axisLine: {
+        lineStyle: {
+          width: px(5),
+          color: '#f5ce85',
+        }
+      },
+      axisTick: {
+        distance: px(-30),
+        splitNumber: 2,
+        lineStyle: {
+          width: px(2),
+          length:px(14),
+          color: '#03e4e6'
+        }
+      },
+      splitLine: {
+        show:false,
+        distance: px(-50),
+        length: px(30),
+        lineStyle: {
+          width:px(3),
+          color: '#999'
+        }
+      },
+      axisLabel: {
+        show:false,
+        distance: px(-60),
+        color: '#999',
+        fontSize: px(15)
+      },
+      anchor: {
+        show: false
+      },
+      title: {
+        show: false
+      },
+      detail: {
+        valueAnimation: false,
+        width: '40%',
+        lineHeight: px(40),
+        borderRadius: 8,
+        offsetCenter: [0, '0%'],
+        fontSize: px(32),
+        fontWeight: 'bolder',
+        formatter: '{value}%',
+        color: 'white'
+      },
+      data: [
+        {
+          value: 98
+        }
+      ]
+    },
   ]
 };
+const intro={"派车数":"483,080","适配数":"483,218"}
 </script>
 
 <style lang="scss" scoped>

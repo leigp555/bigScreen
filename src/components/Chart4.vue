@@ -20,7 +20,7 @@ const option:ECOption = {
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: ['','第一周', '第二周', '第三周', '第四周',''],
+    data: ['第一周', '第二周', '第三周', '第四周',''],
     axisLabel: {
       show: true,
       fontSize: px(15),
@@ -58,9 +58,25 @@ const option:ECOption = {
   },
   series: [
     {
-      data: [1.2, 2.0, 3.5, 5.0, 3.7,4],
+      data: [ 2.0, 3.5, 5.0, 3.7,4],
       type: 'line',
-      areaStyle: {}
+      areaStyle: {
+        color:"#331c52"
+      },
+      lineStyle: {
+        color: "#fe9a80"
+      },
+      itemStyle: {
+        color: "#ffffff"
+      },
+      label: {
+        show: true,
+        fontSize:px(12),
+        color: "white",
+        verticalAlign: "top",
+        position:"top",
+        distance:px(15)
+      }
     }
   ]
 };

@@ -114,7 +114,6 @@ onMounted(() => {
   }
 }
 
-
 .intro {
   position: absolute;
   bottom: px(80);

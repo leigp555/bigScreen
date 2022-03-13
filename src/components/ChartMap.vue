@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import * as echarts from 'echarts/core';
-import {ECOption} from "../type.d.ts/type";
+import {ECOption} from "@/type.d.ts/type";
 
 const px = (value: number) => {
   return (value / 1920 * (window.pagWidth))

@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import Echart from "./Echart.vue";
 import * as echarts from 'echarts/core';
-import {ECOption} from "../type.d.ts/type";
+import {ECOption} from "@/type.d.ts/type";
 
 const px = (value: number) => {
   return (value / 1920 * (window.pagWidth))
@@ -75,6 +75,7 @@ const option: ECOption = {
       },
       label: {
         show: true,
+        formatter: '{@score}%',
         fontSize: px(12),
         color: "white",
         verticalAlign: "center",

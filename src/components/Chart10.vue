@@ -4,61 +4,73 @@
 
 <script lang="ts" setup>
 import Echart from "./Echart.vue";
-import * as echarts from 'echarts/core';
-import {ECOption} from "../type.d.ts/type";
-
 const px = (value: number) => {
   return (value / 1920 * (window.pagWidth))
 }
 
 const option = {
-  tooltip: {
-    trigger: 'item'
-  },
   legend: {
     show: true,
-    top: '5%',
-    left: "50%",
+    top: '30%',
+    right: "20%",
+    itemGap:px(15),
+    itemWidth: px(10),
+    itemHeight: px(10),
+    orient: "vertical",
     textStyle: {
       fontSize: px(12),
-      color:"white"
+      color:"white",
+    },
+    itemStyle: {
+      borderWidth: 0,
+      borderRadius: "50%"
     }
   },
   series: [
     {
-      name: 'Access From',
       type: 'pie',
-      radius: ['40%', '70%'],
-      avoidLabelOverlap: false,
+      radius: ["40%","60%"],
+      top: "0%",
+      left: 'left',
+      width: px(300),
+      color:["#10e8eb","#f9997d","#18a9fc"],
       itemStyle: {
-        borderRadius: 10,
-        borderColor: '#fff',
-        borderWidth: 2
-      },
-      label: {
-        show: false,
-        position: 'center'
-      },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: '40',
-          fontWeight: 'bold'
-        }
+
       },
       labelLine: {
-        show: false
+        length: px(15),
+        length2: 0,
+        textStyle: {
+          fontSize:px(15),
+        },
+        maxSurfaceAngle: px(80)
       },
-      data: [
-        { value: 1048, name: 'Search Engine' },
-        { value: 735, name: 'Direct' },
-        { value: 580, name: 'Email' },
-        { value: 484, name: 'Union Ads' },
-        { value: 300, name: 'Video Ads' }
-      ]
+      label: {
+        fontSize: px(12),
+        fontWeight: "normal",
+        color:"white",
+        padding: [px(6), px(6), px(6), px(6)],
+        formatter: '{b}'.replace(/[0-9]+/,""),
+        edgeDistance: px(12),
+        rich: {
+          fontSize:px(12)
+        }
+      },
+        data: [
+          { value: 1625, name: '货主 1625' },
+          { value: 326, name: '承运商 326'  },
+          { value: 8039, name: '司机 8039' },
+        ]
     }
   ]
 };
+
+
+
+
+
+
+
 </script>
 
 <style lang="scss" scoped>

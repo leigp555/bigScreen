@@ -24,19 +24,16 @@
 import * as echarts from 'echarts/core';
 import Border from './Border.vue'
 import {
-  BarChart, PieChart, LineChart, MapChart, LinesChart, GaugeChart
+  BarChart, PieChart, LineChart, MapChart, LinesChart, GaugeChart,
 } from 'echarts/charts';
 import {
   TitleComponent,
-  TitleComponentOption,
   TooltipComponent,
-  TooltipComponentOption,
   GridComponent,
-  GridComponentOption,
   DatasetComponent,
-  DatasetComponentOption,
   TransformComponent,
-  VisualMapComponent
+  VisualMapComponent,
+  LegendComponent
 } from 'echarts/components';
 import {LabelLayout, UniversalTransition} from 'echarts/features';
 import {CanvasRenderer} from 'echarts/renderers';
@@ -49,6 +46,7 @@ echarts.use([
   GridComponent,
   DatasetComponent,
   TransformComponent,
+  LegendComponent,
   BarChart,
   PieChart,
   LinesChart,

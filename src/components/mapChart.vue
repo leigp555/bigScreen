@@ -19,16 +19,9 @@ import {
   BarChart,PieChart,LineChart, MapChart, LinesChart} from 'echarts/charts';
 import {
   TitleComponent,
-  // 组件类型的定义后缀都为 ComponentOption
-  TitleComponentOption,
   TooltipComponent,
-  TooltipComponentOption,
   GridComponent,
-  GridComponentOption,
-  // 数据集组件
   DatasetComponent,
-  DatasetComponentOption,
-  // 内置数据转换器组件 (filter, sort)
   TransformComponent,
   VisualMapComponent
 } from 'echarts/components';

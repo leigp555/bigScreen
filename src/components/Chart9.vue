@@ -12,12 +12,6 @@ const px = (value: number) => {
 }
 
 const option: ECOption = {
-  // tooltip: {
-  //   trigger: 'axis',
-  //   axisPointer: {
-  //     type: 'shadow'
-  //   }
-  // },
   grid: {
     x: px(80),
     y: px(20),
@@ -50,39 +44,44 @@ const option: ECOption = {
       fontSize: px(12),
       color:"#a19fc4"
     },
-    data: ['17.5m', '9.6m', '4.2m', '17.5(150)m', '9.6(75)m', '14.5m',
-      '6.8m', '7.6m', '13.5m', '17.5(180)m']
+    data: ["货主","承运商","司机"]
   },
   series: [
     {
       name: '车型',
       type: 'bar',
+      showBackground: true,
       barGap:px(30),
       barCateGoryGap:px(30),
       barWidth: px(10),
       itemStyle: {
         color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
           offset: 0,
-          color: "#fccf7c"
+          color: "#3f5dfb"
         }, {
           offset: 0.6,
-          color: "#f99b7f"
+          color: "#2e82fe"
+        },{
+          offset: 0.90,
+          color: "#65d0fa"
+        },{
+          offset: 0.97,
+          color: "#ffffff"
         }, {
           offset: 1,
-          color: "#fd6e80"
+          color: "#ffffff"
         }], false),
         barBorderRadius: [0, px(20), px(20), 0],
       },
-      data: [11036, 16521, 14780, 23467],
       label: {
         show: true,
         fontSize: px(12),
         color: "white",
         verticalAlign: "center",
-        position: "right",
-        distance: px(15)
+        position: "outside",
+        distance: px(10)
       },
-      data: [2680, 2382, 1301,942, 624, 407,312,201,137,108].reverse()
+      data: [78.0,81.5,88.0].reverse()
     },
   ]
 };

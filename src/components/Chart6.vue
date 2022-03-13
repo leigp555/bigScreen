@@ -1,5 +1,5 @@
 <template>
-  <Echart :option="option" title="运单送达情况" root="echartF"/>
+  <Echart :option="option" title="运单到达情况" root="echartF"/>
 </template>
 
 <script lang="ts" setup>
@@ -11,28 +11,72 @@ const px=(value:number)=>{
 }
 
 const option:ECOption = {
-  grid:{
-    x:px(0),
-    y:px(0),
-    x2:px(0),
-    y2:px(0)
-  },
   series: [
     {
-      name: '车辆适配情况',
-      type: 'pie',
-      radius : '100%',//设置饼图大小
-      center: ['45%', '40%'],
-      radius: ['60%', '70%'],
-      avoidLabelOverlap: false,
-      labelLine: {
+      type: 'gauge',
+      center: ['48%', '45%'],
+      radius : '65%',
+      startAngle: 90,
+      endAngle: -270,
+      min: 0,
+      max: 100,
+      splitNumber: 20,
+      itemStyle: {
+        color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [{
+          offset: 0,
+          color: "#1daeff"
+        }, {
+          offset: 1,
+          color: "#395ef5"
+        },], false),
+      },
+      progress: {
+        show: true,
+        width: px(10)
+      },
+      pointer: {
         show: false
       },
-      data: [{ value: 98 }, { value: 2 },],
-
-    }
+      axisLine: {
+        lineStyle: {
+          width: px(10),
+          color: '#f5ce85',
+        }
+      },
+      axisTick: {
+        show:false,
+      },
+      splitLine: {
+        show:false,
+      },
+      axisLabel: {
+        show:false,
+      },
+      anchor: {
+        show: false
+      },
+      title: {
+        show: false
+      },
+      detail: {
+        valueAnimation: false,
+        width: '40%',
+        lineHeight: px(40),
+        borderRadius: 8,
+        offsetCenter: [0, '0%'],
+        fontSize: px(32),
+        fontWeight: 'bolder',
+        formatter: '{value}%',
+        color: 'white'
+      },
+      data: [
+        {
+          value: 98.5
+        }
+      ]
+    },
   ]
-};
+}
 </script>
 
 <style lang="scss" scoped>

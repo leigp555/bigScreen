@@ -73,7 +73,6 @@ const option: ECOption = {
         }], false),
         barBorderRadius: [0, px(20), px(20), 0],
       },
-      data: [11036, 16521, 14780, 23467],
       label: {
         show: true,
         fontSize: px(12),

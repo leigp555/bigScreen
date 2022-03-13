@@ -1,35 +1,61 @@
 <template>
-  <Echart :option="option" title="承运商罚款情况" root="echartJ"/>
+  <Echart :option="option" title="注册用户人数占比情况" root="echartJ"/>
 </template>
 
 <script lang="ts" setup>
 import Echart from "./Echart.vue";
 import * as echarts from 'echarts/core';
 import {ECOption} from "../type.d.ts/type";
-const px=(value:number)=>{
-  return (value/1920*(window.pagWidth))
+
+const px = (value: number) => {
+  return (value / 1920 * (window.pagWidth))
 }
 
-const option:ECOption = {
-  grid:{
-    x:px(0),
-    y:px(0),
-    x2:px(0),
-    y2:px(0)
+const option = {
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    show: true,
+    top: '5%',
+    left: "50%",
+    textStyle: {
+      fontSize: px(12),
+      color:"white"
+    }
   },
   series: [
     {
-      name: '车辆适配情况',
+      name: 'Access From',
       type: 'pie',
-      radius : '100%',//设置饼图大小
-      center: ['45%', '40%'],
-      radius: ['60%', '70%'],
+      radius: ['40%', '70%'],
       avoidLabelOverlap: false,
+      itemStyle: {
+        borderRadius: 10,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
+      label: {
+        show: false,
+        position: 'center'
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: '40',
+          fontWeight: 'bold'
+        }
+      },
       labelLine: {
         show: false
       },
-      data: [{ value: 98 }, { value: 2 },],
-
+      data: [
+        { value: 1048, name: 'Search Engine' },
+        { value: 735, name: 'Direct' },
+        { value: 580, name: 'Email' },
+        { value: 484, name: 'Union Ads' },
+        { value: 300, name: 'Video Ads' }
+      ]
     }
   ]
 };

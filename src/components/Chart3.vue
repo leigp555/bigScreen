@@ -22,22 +22,12 @@ const option:ECOption = {
       max: 100,
       splitNumber: 20,
       itemStyle: {
-        color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [{
+        color: new echarts.graphic.LinearGradient(1, 0, 0, 0, [{
           offset: 0,
-          color: "#ed737e"
+          color: "#f7ce7e"
         }, {
-          offset: 0.5,
-          color: "#ff9585"
-        },{
-          offset: 0.8,
-          color: "#f7ce7e"
-        },{
-          offset: 0.9,
-          color: "#f7ce7e"
-        }
-        , {
           offset: 1,
-          color: "#f7ce7e"
+          color: "#ed737e"
         }], false),
       },
       progress: {

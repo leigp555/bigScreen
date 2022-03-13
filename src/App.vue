@@ -52,7 +52,8 @@
 
 <script setup lang="ts">
 import {computed} from "vue";
-import Chart1 from "./components/Chart1.vue"
+
+import Chart1 from "@/components/Chart1.vue"
 import Chart2 from "./components/Chart2.vue";
 import Chart3 from "./components/Chart3.vue";
 import Chart4 from "./components/Chart4.vue";

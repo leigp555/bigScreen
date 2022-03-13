@@ -10,7 +10,7 @@
 </script>
 
 <style lang="scss" scoped>
-@import "src/helper";
+@import "../helper.scss";
 
 .borderWrap {
   width: 100%;

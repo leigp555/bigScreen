@@ -88,7 +88,7 @@ const demoStyle=computed(()=>{
 
 
 <style lang="scss" scoped>
-@import "helper";
+@import "./helper.scss";
 #demoWrap{
   margin-right: auto;
   margin-left: auto;

@@ -81,7 +81,7 @@ onMounted(() => {
   height: 100%;
 }
 
-@import "src/helper";
+@import "../helper.scss";
 .wrap {
   display: flex;
   flex-direction: column;

@@ -56,9 +56,9 @@ const {option,title,root}=toRefs(props)
 
 const dom=ref<HTMLElement|null>()
 onMounted(()=>{
-  dom.value=document.getElementById(root.value!)
+  dom.value=document.getElementById(root!.value!)
   const myChart = echarts.init(dom.value!);
-  option.value&&myChart.setOption(option.value);
+  option!.value&&myChart.setOption(option!.value);
 })
 </script>
 

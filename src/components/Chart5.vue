@@ -4,10 +4,12 @@
 
 <script lang="ts" setup>
 import Echart from "./Echart.vue";
-import {ECOption} from "@/type.d.ts/type";
 
+
+import {inject} from "vue";
+const screenWidth=inject("pagWidthX")
 const px = (value: number) => {
-  return (value / 1920 * (window.pagWidth))
+  return (value / 1920 * (screenWidth as number))
 }
 const data1=[6500, 7700, 7250, 7500,8000, 7200, 6900]
 const data2=[7000, 7900, 7950, 8100,8200, 8150, 8125]
@@ -15,7 +17,7 @@ const data3=[]
 for (let i=0;i<data1.length;i++){
    data3.push((data1[i]/data2[i])*100)
 }
-const option: ECOption = {
+const option = {
   grid: {
     x: px(80),
     y: px(50),

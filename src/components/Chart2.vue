@@ -5,13 +5,13 @@
 <script lang="ts" setup>
 import Echart from "./Echart.vue";
 import * as echarts from 'echarts/core';
-import {ECOption} from "@/type.d.ts/type";
-
+import {inject} from "vue";
+const screenWidth=inject("pagWidthX")
 const px = (value: number) => {
-  return (value / 1920 * (window.pagWidth))
+  return (value / 1920 * (screenWidth as number))
 }
 
-const option: ECOption = {
+const option = {
   grid: {
     x: px(80),
     y: px(20),

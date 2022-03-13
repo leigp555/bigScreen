@@ -4,19 +4,18 @@
 
 <script lang="ts" setup>
 import * as echarts from 'echarts/core';
-import {ECOption} from "@/type.d.ts/type";
-
+import {inject} from "vue";
+const screenWidth=inject("pagWidthX")
 const px = (value: number) => {
-  return (value / 1920 * (window.pagWidth))
+  return (value / 1920 * (screenWidth as number))
 }
-
 
 import china from "../assets/china.json"
 import MapChart from "./mapChart.vue";
-
+//@ts-ignore
 echarts.registerMap('CN', china);
 
-const option: ECOption = {
+const option = {
   color: "white",
   visualMap: {
     type: "piecewise",

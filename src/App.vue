@@ -51,7 +51,7 @@
 
 
 <script setup lang="ts">
-import {computed} from "vue";
+import {computed, provide} from "vue";
 import Chart1 from "@/components/Chart1.vue"
 import Chart2 from "./components/Chart2.vue";
 import Chart3 from "./components/Chart3.vue";
@@ -66,7 +66,8 @@ import ChartMap from "./components/ChartMap.vue";
 //通过浏览器宽高以及设计稿比例计算出页面的宽度高度
 const deviceWidth=document.documentElement.clientWidth
 const deviceHeight=document.documentElement.clientHeight
-window.pagWidth=deviceWidth/deviceHeight>1920/1080?deviceHeight*(1920/1080):deviceWidth
+const pagWidth=deviceWidth/deviceHeight>1920/1080?deviceHeight*(1920/1080):deviceWidth
+provide("pagWidthX",pagWidth)
 const pagHeight=pagWidth/(1920/1080)
 const style=document.createElement("style")
 const string=`html{
